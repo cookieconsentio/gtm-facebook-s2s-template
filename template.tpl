@@ -195,6 +195,9 @@ const encodeUriComponent = require('encodeUriComponent');
 const callInWindow = require('callInWindow');
 const copyFromWindow = require('copyFromWindow');
 const setInWindow = require('setInWindow');
+const createQueue = require('createQueue');
+
+const loadData = () => {
   
 /**
  * Get CCC object from window
@@ -209,19 +212,20 @@ const getCCC = () => {
   setInWindow('ccc', function() {    
     let queue = copyFromWindow('ccc.q');
     
-    if(queue) {
+    if(queue) { 
       callInWindow('ccc.q.push', arguments);
     }
     else {
-      let ccc = {};
-      ccc.q = [];
+      let queue = createQueue('ccc.q');    
       callInWindow('ccc.q.push', arguments);
     }
-  });
     
-  return copyFromWindow('ccc');
-};
 
+  });
+  
+  return copyFromWindow('ccc');
+};  
+  
 /**
  * Make sure we have the right permissions
  */
@@ -237,7 +241,7 @@ if (queryPermission('access_globals', 'readwrite', 'ccc') &&
   if(data.testEventCode) {    
      ccc('testCode', data.testEventCode);
   }
-   
+     
   /**
   * Execute the right function based on the selected type
   */
@@ -249,7 +253,7 @@ if (queryPermission('access_globals', 'readwrite', 'ccc') &&
       break;
     
     case 'lead':
-       ccc('lead', data.leadValue, data.eventName, data.marketingEnabled, data.facebookUniqueId);
+       ccc('lead', data.eventName, data.leadValue, data.marketingEnabled, data.facebookUniqueId);
       break;      
  
     case 'enhancedEcommercePurchase':
@@ -300,13 +304,16 @@ if (queryPermission('access_globals', 'readwrite', 'ccc') &&
       ccc('customerData', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId);
       break;        
 }
-
-    let url = 'https://edge.cookieconsent.io/prod/js/' + encodeUriComponent(data.id) + '.js';
-
-    if (queryPermission('inject_script', url)) {
-      injectScript(url, data.gtmOnSuccess, data.gtmOnFailure, url);
-    }
   }
+  
+  return data.gtmOnSuccess();
+};
+
+let url = 'https://edge.cookieconsent.io/prod/js/' + encodeUriComponent(data.id) + '.js';
+
+if (queryPermission('inject_script', url)) { 
+  injectScript(url, loadData(), data.gtmOnFailure, url);
+}
 
 
 ___WEB_PERMISSIONS___
@@ -509,5 +516,4 @@ scenarios: []
 ___NOTES___
 
 Created on 6/7/2021, 8:20:24 AM
-
 
