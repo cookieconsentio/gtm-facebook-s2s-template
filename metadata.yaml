@@ -2,6 +2,9 @@ homepage: "https://www.cookieconsent.io/"
 documentation: "https://www.cookieconsent.io/developers/"
 versions:
 
+  - sha: d6ed1b8585cfbcc7dbe7f3278271fb9c1325e921
+    changeNotes: Added unique ID option for all types
+
   - sha: 334639886a5cec03024de879ab563fb89f63cadd
     changeNotes: Updated template with better loader handler
 
