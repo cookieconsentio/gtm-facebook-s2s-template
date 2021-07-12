@@ -2,6 +2,9 @@ homepage: "https://www.cookieconsent.io/"
 documentation: "https://www.cookieconsent.io/developers/"
 versions:
 
+  - sha: 5b7199ff181278bcf780af52bf74f73197267fbd
+    changeNotes: Added regular FB mode
+
   - sha: d6ed1b8585cfbcc7dbe7f3278271fb9c1325e921
     changeNotes: Added unique ID option for all types
 
