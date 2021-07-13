@@ -181,6 +181,10 @@ ___TEMPLATE_PARAMETERS___
       {
         "value": "trackSingleCustom",
         "displayValue": "TrackSingleCustom"
+      },
+      {
+        "value": "trackCustom",
+        "displayValue": "TrackCustom"
       }
     ],
     "simpleValueType": true,
@@ -188,14 +192,14 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "type": "TEXT",
-    "name": "facebookUniqueId",
-    "displayName": "Facebook unique ID value",
+    "name": "ecommerceObject",
+    "displayName": "Ecommerce datalayer object",
     "simpleValueType": true
   },
   {
     "type": "TEXT",
-    "name": "ecommerceObject",
-    "displayName": "Ecommerce datalayer object",
+    "name": "facebookUniqueId",
+    "displayName": "Facebook unique ID value",
     "simpleValueType": true
   },
   {
