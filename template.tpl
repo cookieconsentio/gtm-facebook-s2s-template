@@ -156,6 +156,10 @@ ___TEMPLATE_PARAMETERS___
       {
         "value": "marketing",
         "displayValue": "Marketing accepted"
+      },
+      {
+        "value": "none",
+        "displayValue": "None"
       }
     ],
     "simpleValueType": true,
@@ -198,12 +202,6 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "type": "TEXT",
-    "name": "facebookUniqueId",
-    "displayName": "Facebook unique ID value",
-    "simpleValueType": true
-  },
-  {
-    "type": "TEXT",
     "name": "leadValue",
     "displayName": "Lead value",
     "simpleValueType": true,
@@ -219,6 +217,12 @@ ___TEMPLATE_PARAMETERS___
         "type": "NON_EMPTY"
       }
     ]
+  },
+  {
+    "type": "TEXT",
+    "name": "facebookUniqueId",
+    "displayName": "Facebook unique ID value",
+    "simpleValueType": true
   },
   {
     "type": "TEXT",
