@@ -2,6 +2,9 @@ homepage: "https://www.cookieconsent.io/"
 documentation: "https://www.cookieconsent.io/developers/"
 versions:
 
+  - sha: 9cf6910b38b0eb49e5733fe671114517888e7666
+    changeNotes: Added none option for server2server
+
   - sha: 90127bc7d477b9bc14a37eaff7257ec162a81128
     changeNotes: Added trackCustom option
 
