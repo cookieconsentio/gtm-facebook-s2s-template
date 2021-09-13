@@ -229,6 +229,72 @@ ___TEMPLATE_PARAMETERS___
     "name": "testEventCode",
     "displayName": "testEventCode",
     "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "em",
+    "displayName": "E-mail",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "ph",
+    "displayName": "Phone",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "ge",
+    "displayName": "Gender",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "db",
+    "displayName": "Birthdate",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "ln",
+    "displayName": "Last name",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "fn",
+    "displayName": "First name",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "ct",
+    "displayName": "City",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "st",
+    "displayName": "State",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "zp",
+    "displayName": "Zipcode",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "country",
+    "displayName": "Country",
+    "simpleValueType": true
+  },
+  {
+    "type": "TEXT",
+    "name": "external_id",
+    "displayName": "External id",
+    "simpleValueType": true
   }
 ]
 
@@ -296,59 +362,59 @@ if (queryPermission('access_globals', 'readwrite', 'ccc') &&
       
     case 'pageView':
       
-       ccc('pageView', data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode);
+       ccc('pageView', data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, undefined, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;
     
     case 'lead':
-       ccc('lead', data.eventName, data.leadValue, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode);
+       ccc('lead', data.eventName, data.leadValue, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;      
  
     case 'enhancedEcommercePurchase':
-       ccc('enhancedEcommercePurchase', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode);
+       ccc('enhancedEcommercePurchase', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;          
   
     case 'standardEcommercePurchase':
-       ccc('standardEcommercePurchase', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode);
+       ccc('standardEcommercePurchase', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;                
 
     case 'enhancedEcommerceProductDetails':
-       ccc('enhancedEcommerceProductDetails', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode);
+       ccc('enhancedEcommerceProductDetails', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;       
 
     case 'enhancedEcommerceAddToCart':
-       ccc('enhancedEcommerceAddToCart', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode);
+       ccc('enhancedEcommerceAddToCart', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;         
 
     case 'enhancedEcommerceRemoveFromCart':
-       ccc('enhancedEcommerceRemoveFromCart', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode);
+       ccc('enhancedEcommerceRemoveFromCart', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;        
       
     case 'enhancedEcommerceCart':
-       ccc('enhancedEcommerceCart', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode);
+       ccc('enhancedEcommerceCart', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;           
 
     case 'enhancedEcommerceCheckout':
-      ccc('enhancedEcommerceCheckout', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode);
+      ccc('enhancedEcommerceCheckout', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;        
       
     case 'enhancedEcommerceImpressions':
-      ccc('enhancedEcommerceImpressions', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode);
+      ccc('enhancedEcommerceImpressions', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;       
   
     case 'enhancedEcommerceProductClick':
-      ccc('enhancedEcommerceProductClick', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode);
+      ccc('enhancedEcommerceProductClick', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;       
   
     case 'enhancedEcommercePromotionImpressions':
-      ccc('enhancedEcommercePromotionImpressions', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode);
+      ccc('enhancedEcommercePromotionImpressions', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;       
 
     case 'enhancedEcommercePromotionClick':
-      ccc('enhancedEcommercePromotionClick', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode);
+      ccc('enhancedEcommercePromotionClick', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;       
  
     case 'customerData':
-      ccc('customerData', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode);
+      ccc('customerData', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;        
 }
   }
