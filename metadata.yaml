@@ -2,6 +2,9 @@ homepage: "https://www.cookieconsent.io/"
 documentation: "https://www.cookieconsent.io/developers/"
 versions:
 
+  - sha: 23229a0e1f90351dec1678b4922dbb960ffdfb20
+    changeNotes: Added form field options    
+
   - sha: 9cf6910b38b0eb49e5733fe671114517888e7666
     changeNotes: Added none option for server2server
 
