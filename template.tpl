@@ -113,6 +113,42 @@ ___TEMPLATE_PARAMETERS___
       {
         "value": "setup",
         "displayValue": "Setup"
+      },
+      {
+        "value": "ga4ViewItemList",
+        "displayValue": "GA4 View item list"
+      },
+      {
+        "value": "ga4SelectItem",
+        "displayValue": "GA4 Select item"
+      },
+      {
+        "value": "ga4ViewItem",
+        "displayValue": "GA4 View item"
+      },
+      {
+        "value": "ga4AddToCart",
+        "displayValue": "GA4 Add to cart"
+      },
+      {
+        "value": "ga4RemoveFromCart",
+        "displayValue": "GA4 Remove from cart"
+      },
+      {
+        "value": "ga4SelectPromotion",
+        "displayValue": "GA4 Select Promotion"
+      },
+      {
+        "value": "ga4ViewPromotion",
+        "displayValue": "GA4 View Promotion"
+      },
+      {
+        "value": "ga4Checkout",
+        "displayValue": "GA4 Checkout"
+      },
+      {
+        "value": "ga4Purchase",
+        "displayValue": "GA4 Purchase"
       }
     ],
     "simpleValueType": true,
@@ -415,7 +451,43 @@ if (queryPermission('access_globals', 'readwrite', 'ccc') &&
  
     case 'customerData':
       ccc('customerData', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
-      break;        
+      break;
+      
+    case 'ga4ViewItemList':
+      ccc('ga4ViewItemList', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
+      break;
+      
+   case 'ga4SelectItem':
+      ccc('ga4SelectItem', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
+      break;
+      
+      case 'ga4ViewItem':
+      ccc('ga4ViewItem', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
+      break;
+      
+      case 'ga4AddToCart':
+      ccc('ga4AddToCart', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
+      break;
+      
+      case 'ga4RemoveFromCart':
+      ccc('ga4RemoveFromCart', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
+      break;    
+
+      case 'ga4SelectPromotion':
+      ccc('ga4SelectPromotion', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
+      break;
+      
+      case 'ga4ViewPromotion':
+      ccc('ga4ViewPromotion', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
+      break;    
+      
+      case 'ga4Checkout':
+      ccc('ga4Checkout', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
+      break;
+      
+      case 'ga4Purchase':
+      ccc('ga4Purchase', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
+      break;       
 }
   }
   
