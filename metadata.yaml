@@ -2,6 +2,9 @@ homepage: "https://www.cookieconsent.io/"
 documentation: "https://www.cookieconsent.io/developers/"
 versions:
 
+  - sha: 714fafb04b66fc2c33c0875a0916ee3a27c53076
+    changeNotes: Added GA4 datalayer hooks
+
   - sha: 23229a0e1f90351dec1678b4922dbb960ffdfb20
     changeNotes: Added form field options    
 
