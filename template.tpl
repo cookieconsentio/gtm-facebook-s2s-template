@@ -147,6 +147,14 @@ ___TEMPLATE_PARAMETERS___
         "displayValue": "GA4 Checkout"
       },
       {
+        "value": "ga4AddPaymentInfo",
+        "displayValue": "GA4 AddPaymentInfo"
+      },
+      {
+        "value": "ga4AddShippingInfo",
+        "displayValue": "GA4 AddShippingInfo"
+      },
+      {
         "value": "ga4Purchase",
         "displayValue": "GA4 Purchase"
       }
@@ -485,6 +493,14 @@ if (queryPermission('access_globals', 'readwrite', 'ccc') &&
       ccc('ga4Checkout', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;
       
+      case 'ga4AddShippingInfo':
+      ccc('ga4AddShippingInfo', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
+      break;
+      
+      case 'ga4AddPaymentInfo':
+      ccc('ga4AddPaymentInfo', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
+      break;
+      
       case 'ga4Purchase':
       ccc('ga4Purchase', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;       
@@ -701,4 +717,5 @@ scenarios: []
 ___NOTES___
 
 Created on 6/7/2021, 8:20:24 AM
+
 
