@@ -2,6 +2,9 @@ homepage: "https://www.cookieconsent.io/"
 documentation: "https://www.cookieconsent.io/developers/"
 versions:
 
+  - sha: cde5edafe7df24c8335d82424bde6643b1415427
+    changeNotes: Added tag type to scripts
+
   - sha: c18ed67f2acd12326dc3257522cebebda46767fe
     changeNotes: Added tag type
 
