@@ -211,6 +211,24 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "type": "SELECT",
+    "name": "tagType",
+    "displayName": "Tag Type",
+    "macrosInSelect": false,
+    "selectItems": [
+      {
+        "value": "javascript",
+        "displayValue": "Javascript"
+      },
+      {
+        "value": "image",
+        "displayValue": "Image"
+      }
+    ],
+    "simpleValueType": true,
+    "defaultValue": "javascript"
+  },
+  {
+    "type": "SELECT",
     "name": "facebookTrackMode",
     "displayName": "Facebook Tracking Mode",
     "selectItems": [
@@ -426,7 +444,7 @@ if (queryPermission('access_globals', 'readwrite', 'ccc') &&
       break;       
 
     case 'enhancedEcommerceAddToCart':
-       ccc('enhancedEcommerceAddToCart', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
+       ccc(data.id, 'enhancedEcommerceAddToCart', data.ecommerceObject, data.eventName, data.marketingEnabled, data.facebookUniqueId, 'website', data.trackMode, data.facebookTrackMode, data.em, data.ph, data.ge, data.db, data.ln, data.fn, data.ct, data.st, data.zp, data.country, data.external_id);
       break;         
 
     case 'enhancedEcommerceRemoveFromCart':
@@ -717,5 +735,4 @@ scenarios: []
 ___NOTES___
 
 Created on 6/7/2021, 8:20:24 AM
-
 
