@@ -2,6 +2,9 @@ homepage: "https://www.cookieconsent.io/"
 documentation: "https://www.cookieconsent.io/developers/"
 versions:
 
+  - sha: c18ed67f2acd12326dc3257522cebebda46767fe
+    changeNotes: Added tag type
+
   - sha: 0d1c6f8b71847da3b62e9b99aad2b5396b9d77b3
     changeNotes: Added extra GA4 events
 
